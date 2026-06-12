@@ -1,0 +1,6 @@
+# Runtime dependencies. For development tooling (pytest) install with:
+#   pip install -e ".[dev]"
+numpy>=1.24
+scipy>=1.10
+cvxpy>=1.4
+matplotlib>=3.7

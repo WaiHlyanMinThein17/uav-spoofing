@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uav-spoof"
+version = "0.1.0"
+description = "Attacker-defender dynamics for UAV GPS-spoofing: Kalman filter, MPC, chi-square detection, and an evasive attacker."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Wai Hlyan Min Thein" }]
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "cvxpy>=1.4",
+    "matplotlib>=3.7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
